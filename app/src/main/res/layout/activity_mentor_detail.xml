@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wgu.mbuel.wgumobileapp.MentorSelection">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarMentorDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textViewMentorName"
+        android:layout_below="@+id/appBarMentorDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_above="@+id/editTextMentorWorkEmail"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/mentor_name" />
+
+    <EditText
+        android:id="@+id/editTextMentorName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appBarMentorDetail"
+        android:layout_toRightOf="@+id/textViewMentorName"
+        android:ems="10"
+        android:inputType="textFilter|textPersonName"
+        android:text="Name"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:id="@+id/textViewMentorWorkEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignBottom="@+id/editTextMentorWorkEmail"
+        android:layout_alignEnd="@+id/textViewMentorName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewMentorName"
+        android:layout_below="@+id/textViewMentorName"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/work_email" />
+
+    <EditText
+        android:id="@+id/editTextMentorWorkEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextMentorName"
+        android:layout_toEndOf="@+id/textViewMentorName"
+        android:layout_toRightOf="@+id/textViewMentorName"
+        android:ems="10"
+        android:inputType="textFilter|textEmailAddress"
+        android:text="mbuel@test.com"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textViewMentorHomeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMentorHomeEmail"
+        android:layout_alignEnd="@+id/textViewMentorName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewMentorName"
+        android:layout_below="@+id/textViewMentorWorkEmail"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/home_email" />
+
+    <EditText
+        android:id="@+id/editTextMentorHomeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextMentorWorkEmail"
+        android:layout_toEndOf="@+id/textViewMentorName"
+        android:layout_toRightOf="@+id/textViewMentorName"
+        android:ems="10"
+        android:inputType="textFilter|textEmailAddress"
+        android:text="mbuel@test.com"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:id="@+id/textViewMentorCellPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMentorCellPhone"
+        android:layout_alignEnd="@+id/textViewMentorName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewMentorName"
+        android:layout_below="@+id/textViewMentorHomeEmail"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/work_phone" />
+
+    <EditText
+        android:id="@+id/editTextMentorCellPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextMentorHomeEmail"
+        android:layout_toEndOf="@+id/textViewMentorName"
+        android:layout_toRightOf="@+id/textViewMentorCellPhone"
+        android:ems="10"
+        android:inputType="textFilter|phone"
+        android:maxLength="12"
+        android:text="555-555-5555"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textViewMentorHomePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMentorHomePhone"
+        android:layout_alignEnd="@+id/textViewMentorName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewMentorName"
+        android:layout_below="@+id/textViewMentorCellPhone"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/home_phone" />
+
+    <EditText
+        android:id="@+id/editTextMentorHomePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextMentorCellPhone"
+        android:layout_toEndOf="@+id/textViewMentorName"
+        android:layout_toRightOf="@+id/textViewMentorCellPhone"
+        android:ems="10"
+        android:inputType="textFilter|phone"
+        android:maxLength="12"
+        android:text="555-555-5555"
+        android:textAlignment="center" />
+    <!--DONE: Also need a combo box here for selecting courses to add as assignments to Mentors. (remove FAB)-->
+    <TextView
+        android:id="@+id/textViewMentorAssignments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerAssignCourse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewMentorHomePhone"
+        android:layout_toLeftOf="@+id/editTextMentorHomePhone"
+        android:layout_toStartOf="@+id/editTextMentorHomePhone"
+        android:layout_marginTop="@dimen/textViewMargin"
+        android:text="@string/mentor_course_assignments" />
+
+    <ListView
+        android:id="@+id/listCourseAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewMentorAssignments" />
+
+    <Spinner
+        android:id="@+id/spinnerAssignCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMentorHomePhone"
+        android:layout_toEndOf="@+id/textViewMentorAssignments"
+        android:layout_toRightOf="@+id/textViewMentorAssignments" />
+
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wgu.mbuel.wgumobileapp.app.SoftKeyboardLsnedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activityTermCourseDetail"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wgu.mbuel.wgumobileapp.TermCourseDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarTermCourseDetail">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/content_term_course_detail"-->
+        <!--android:id="@+id/include2" />-->
+
+    <TextView
+        android:id="@+id/textViewCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/title"
+        android:layout_below="@+id/appBarTermCourseDetail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/spinnerTermCourseDetailTitle"
+        android:layout_toStartOf="@+id/spinnerTermCourseDetailTitle" />
+    <Spinner
+        android:id="@+id/spinnerTermCourseDetailTitle"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/appBarTermCourseDetail"
+        android:layout_toRightOf="@+id/textViewCourseStartDate"
+        android:layout_toEndOf="@+id/textViewCourseStartDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCourseStartAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/alarm"
+        android:layout_below="@+id/spinnerTermCourseDetailTitle"
+        android:layout_alignRight="@+id/spinnerTermCourseDetailTitle"
+        android:layout_alignEnd="@+id/spinnerTermCourseDetailTitle"
+        android:layout_above="@+id/editTextCourseEndDate" />
+
+    <TextView
+        android:id="@+id/textViewCourseStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextCourseStartDate"
+        android:padding="5dp"
+        android:text="@string/start_date"
+        android:layout_below="@+id/spinnerTermCourseDetailTitle" />
+
+    <EditText
+        android:id="@+id/editTextCourseStartDate"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textFilter|date"
+        android:maxLength="10"
+        android:text="06/10/2017"
+        android:textAlignment="center"
+        android:layout_below="@+id/spinnerTermCourseDetailTitle"
+        android:layout_toRightOf="@+id/textViewCourseStartDate"
+        android:layout_toEndOf="@+id/textViewCourseStartDate" />
+
+    <EditText
+        android:id="@+id/editTextCourseEndDate"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textFilter|date"
+        android:maxLength="10"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_below="@+id/textViewCourseStartDate"
+        android:layout_toRightOf="@+id/textViewCourseEndDate"
+        android:layout_toLeftOf="@+id/checkBoxCourseEndAlarm"
+        android:layout_toStartOf="@+id/checkBoxCourseEndAlarm" />
+
+    <TextView
+        android:id="@+id/textViewCourseEndDate"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextCourseEndDate"
+        android:layout_alignEnd="@+id/textViewCourseStartDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewCourseStartDate"
+        android:layout_below="@+id/textViewCourseStartDate"
+        android:text="@string/end_date" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCourseEndAlarm"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm"
+        android:layout_alignTop="@+id/editTextCourseEndDate"
+        android:layout_alignLeft="@+id/checkBoxCourseStartAlarm"
+        android:layout_alignStart="@+id/checkBoxCourseStartAlarm"
+        android:layout_alignBottom="@+id/editTextCourseEndDate" />
+
+    <TextView
+        android:id="@+id/textViewTermCourseDetailsNotes"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notes"
+        android:layout_above="@+id/scrollView2"
+        android:layout_toRightOf="@+id/checkBoxCourseStartAlarm"
+        android:layout_toEndOf="@+id/checkBoxCourseStartAlarm" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/spinnerTermCourseDetailTitle"
+        android:layout_toEndOf="@+id/spinnerTermCourseDetailTitle"
+        android:layout_below="@+id/checkBoxCourseStartAlarm">
+
+        <EditText
+            android:id="@+id/editTextTermCourseDetailNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:textAlignment="center" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/status"
+        android:layout_below="@+id/appBarTermCourseDetail"
+        android:layout_toRightOf="@+id/spinnerTermCourseDetailTitle"
+        android:layout_toEndOf="@+id/spinnerTermCourseDetailTitle" />
+
+    <EditText
+        android:id="@+id/editTextCourseDetailStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_below="@+id/appBarTermCourseDetail"
+        android:layout_toRightOf="@+id/tvStatus"
+        android:layout_toEndOf="@+id/tvStatus" />
+
+    <ImageButton
+        android:id="@+id/btnTermCourseDetailNotesShare"
+        android:contentDescription="@string/share_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_share_notes"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2"
+        android:layout_alignTop="@+id/btnAssessmentList" />
+
+    <Button
+        android:id="@+id/btnAssessmentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assessment_list"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/checkBoxCourseEndAlarm"
+        android:layout_toStartOf="@+id/checkBoxCourseEndAlarm" />
+
+    <Button
+        android:id="@+id/btnAssignedMentors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assigned_mentors"
+        android:layout_above="@+id/btnAssessmentList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnAssessmentList"
+        android:layout_alignEnd="@+id/btnAssessmentList" />
+
+
+</com.wgu.mbuel.wgumobileapp.app.SoftKeyboardLsnedRelativeLayout>

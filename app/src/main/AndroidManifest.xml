@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wgu.mbuel.wgumobileapp">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TermView"
+            android:label="@string/title_activity_term_view"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TermSelection"
+            android:label="@string/title_activity_term_detail"
+            android:parentActivityName=".TermView"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.TermView" />
+        </activity>
+        <activity
+            android:name=".MentorView"
+            android:label="@string/title_activity_mentor_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CourseView"
+            android:label="@string/title_activity_course_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MentorSelection"
+            android:label="@string/title_activity_mentor_detail"
+            android:parentActivityName=".MentorView"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.MentorView" />
+        </activity>
+        <activity
+            android:name=".CourseSelection"
+            android:label="@string/title_activity_course_detail"
+            android:parentActivityName=".CourseView"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.CourseView" />
+        </activity>
+        <activity
+            android:name=".TermCourseDetail"
+            android:label="@string/title_activity_term_course_detail"
+            android:parentActivityName=".TermSelection"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.TermSelection" />
+        </activity>
+        <activity
+            android:name=".AssessmentView"
+            android:label="@string/title_activity_assessment_list"
+            android:parentActivityName=".TermCourseDetail"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.TermCourseDetail" />
+        </activity>
+        <activity
+            android:name=".AssessmentSelection"
+            android:label="@string/title_activity_assessment_detail"
+            android:parentActivityName=".AssessmentView"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wgu.mbuel.wgumobileapp.AssessmentView" />
+        </activity>
+    </application>
+
+</manifest>

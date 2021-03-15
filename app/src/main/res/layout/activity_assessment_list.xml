@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wgu.mbuel.wgumobileapp.AssessmentView">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarAssessmentList">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tvAlTermTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVAlCourseTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarAssessmentList"
+        android:text="@string/term_title"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextAssessmentViewTermTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appBarAssessmentList"
+        android:layout_toEndOf="@+id/tvAlTermTitle"
+        android:layout_toRightOf="@+id/tvAlTermTitle"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tVAlCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/course"
+        android:layout_alignBottom="@+id/editTextAssessmentViewCourseTitle"
+        android:layout_alignTop="@+id/editTextAssessmentViewCourseTitle"
+        android:layout_toLeftOf="@+id/editTextAssessmentViewCourseTitle"
+        android:layout_toStartOf="@+id/editTextAssessmentViewCourseTitle" />
+
+    <EditText
+        android:id="@+id/editTextAssessmentViewCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextAssessmentViewTermTitle"
+        android:layout_toEndOf="@+id/tvAlTermTitle"
+        android:layout_toRightOf="@+id/tvAlTermTitle"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textAlignment="center" />
+
+    <ListView
+        android:id="@+id/lvAlAssessmentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editTextAssessmentViewCourseTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAssessmentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@mipmap/ic_add_item"
+        android:padding="10dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
